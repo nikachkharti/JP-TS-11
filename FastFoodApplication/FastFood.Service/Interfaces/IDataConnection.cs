@@ -2,7 +2,7 @@
 
 namespace FastFood.Service.Interfaces
 {
-    public interface IGeneralRepository
+    public interface IDataConnection
     {
         Task<General> GetBalance();
     }

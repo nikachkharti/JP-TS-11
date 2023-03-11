@@ -7,18 +7,18 @@ namespace FastFood.Service
     {
         public static string ConnectionString { get; } = @"Server=DESKTOP-E70FG99\SQLEXPRESS;Database=FastFood;Trusted_Connection=True;TrustServerCertificate=true";
 
-        public static IGeneralRepository GeneralRepository { get; private set; }
+        public static IDataConnection DataConnection { get; private set; }
 
-        public static IGeneralRepository ChooseDbType(DbType dbType)
+        public static IDataConnection ChooseDbType(DbType dbType)
         {
             switch (dbType)
             {
                 case DbType.Sql:
-                    GeneralRepository = new GeneralRepository();
+                    DataConnection = new DataConnection();
                     break;
             }
 
-            return GeneralRepository;
+            return DataConnection;
         }
 
     }

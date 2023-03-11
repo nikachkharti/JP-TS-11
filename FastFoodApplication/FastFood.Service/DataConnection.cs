@@ -5,7 +5,7 @@ using System.Data;
 
 namespace FastFood.Service
 {
-    public class GeneralRepository : IGeneralRepository
+    public class DataConnection : IDataConnection
     {
         public async Task<General> GetBalance()
         {

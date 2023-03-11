@@ -12,7 +12,7 @@ namespace FastFood.UI
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            var resultBalance = await GlobalConfig.GeneralRepository.GetBalance();
+            var resultBalance = await GlobalConfig.DataConnection.GetBalance();
             balanceLabel.Text = resultBalance.Balance.ToString();
         }
     }
